@@ -14,15 +14,8 @@ class ViewController: UIViewController {
     var player = AVAudioPlayer()
     var sounds = ["horse1", "horse2", "horse3", "horse4", "horse5"]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-
-        
-    }
-    
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        
         if event?.subtype == UIEventSubtype.MotionShake {
             
             let randomNumber = Int(arc4random_uniform(UInt32(sounds.count)))
